@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login_Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function check()
+		{
+			 var z=document.log.usrnm.value;
+		    var a=document.log.psd.value;
+		   
+		    
+
+		  	if(z=="")
+		  	{
+		  		alert("ENTER USERNAME");
+		  		return false;
+		  	}
+		  		if(a=="")
+		  	{
+		  		alert("ENTER PASSWORD");
+		  		return false;
+		  	}
+		  
+		}
+	</script>
+</head>
+<body>
+	<form name="log" method="post" action="login.php" id="formm">
+    <div id="div1"></div>
+    <div id="div2">
+	<table id="tables">
+		<h2 align="center">Login Page</h2>
+		<tr><td>Username</td></tr><br><tr><td><input type="text" name="usrnm" id="i" placeholder="   Enter Usernme"></td></tr><br>
+		<tr><td>Password</td></tr><br><tr><td><input type="password" name="psd" id="i" placeholder="   Enter Password"></td></tr><br></table>
+    <input type="submit" id="bt" value="Login" onclick="return check()"><br><br><br><br> 
+    <a href="Registration.html" id="c">Sign Up</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="forpas.html" id="f">forgot password?</a>
+    </form>
+</body>
+</html>

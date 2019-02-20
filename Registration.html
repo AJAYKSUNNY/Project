@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Registration</title>
+
+      <script>
+		function validate()
+		  {
+		    var namepattern=/^[A-z\s]+$/
+		    var unamepattern=/^[a-zA-Z0-9]+$/
+		    var emailpattern=/^[a-zA-Z][a-zA-Z0-9]*@[a-zA-Z]*.[a-zA-Z]+$/
+		    var paspattern=/^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$/
+		    var x=document.Register.nm.value;
+		    var y=document.Register.unm.value;
+		    var z=document.Register.em.value;
+		    var a=document.Register.pd.value;
+		   
+		    
+
+		  	if(document.Register.nm.value=="")
+		  	{
+		  		alert("ENTER NAME");
+		  		return false;
+		  	}
+		  	if((!namepattern.test(x)))
+		  	{
+		  		alert("Name should conain only alphabets");
+		  		return false;
+		  	}
+		  	if(document.Register.unm.value=="")
+		  	{
+		  		alert('ENTER USERNAME');
+		  		return false;
+		  	}
+		  	if((!unamepattern.test(y)))
+		  	{
+		  		alert("Username should conain only alphabets and numbers");
+		  		return false;
+		  	}
+		  	 if(document.Register.pd.value=="")
+		  	{
+		  		alert('ENTER PASSWORD');
+		  		return false;
+		  	}
+		  	if((!paspattern.test(a)))
+		  	{
+		  		alert("Password is not strong!!\n It should contain numbers and Special Characters\n Minimum 8 characters");
+		  		return false;
+		  	}
+		  	if(document.Register.em.value=="")
+		  	{
+		  		alert('ENTER EMAIL');
+		  		return false;
+		  	}
+		  	if((!emailpattern.test(z)))
+		  	{
+		  		alert(" Invalid Email");
+		  		return false;
+		  	}
+		   if(document.Register.num.value=="")
+		  	{
+		  		alert('ENTER NUMBER');
+		  		return false;
+		  	}
+		  	if(b.length!=10)
+		  	{
+		  		alert("Number should contain exactly 10 digits");
+		  		return false;
+		  	}
+		  	
+		  }
+		  
+        function reseter(){
+        	 
+             document.getElementById("myForm").reset();
+
+		  }
+	</script>
+
+
+
+</head>
+<body >
+  <form name="Register" method="post" action="connect.php" >
+  	
+  	<table align="center" id="tble">
+  		<h1 align="center">REGISTRATION PAGE</h1><br><br><br>
+  		<tr><td>NAME</td><td><input type="text" name="nm" id="idz"></td></tr><tr></tr><tr></tr><tr></tr>
+  		<tr><td>USERNAME</td><td><input type="text" name="unm" id="idz"></td></tr><tr></tr><tr></tr><tr></tr>
+  		<tr><td>PASSWORD</td><td><input type="password" name="pd" id="idz"></td></tr><tr></tr><tr></tr><tr></tr>
+  		<tr><td>EMAIL</td><td><input type="text" name="em" id="idz"></td></tr><tr></tr><tr></tr><tr></tr>
+  		<tr><td>NUMBER</td><td><input type="text" name="num" id="idz"></td></tr>
+  		<tr><td>GENDER</td><td><input type="radio" name="gd" value="m" id="idiz">Male<input type="radio" name="gd" value="f" id="idiz">Female<input type="radio" name="gd" value="o" id="idiz" checked>Other</td></tr><tr></tr><tr></tr>
+  	<br/><br/><br/>
+  	</table><input type="submit" value="Submit" name="sb" id="btn" onclick="return validate()"><input type="reset" value="Reset" name="rs" id="btn1" onclick="return reseter()" id="myForm">
+  </form><br><br><div id="foot">Already have account? 
+  <a href="loginpage.html">Login</a></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reset Password</title>
+	<h3 align="center">Reset Password</h3><br><br><br>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function valid()
+		{
+			var x=document.forgpas.emm.value;
+				if(x=="")
+		  	{
+		  		alert("ENTER EMAIL ID");
+		  		return false;
+		  	}
+		}
+	</script>
+</head>
+<body>
+  <form name="forgpas" action="forgotpass.php" method="post">
+  	<table id="tbl" align="center">
+  		<tr><td>EMAIL</td><td>:</td><td><input type="text" name="emm" id="idz"></td></tr>
+  		
+  	</table><input type="submit" id="sub" name="submit_button" value="Submit" onclick="return valid()">
+  </form><br><br><div id="foot">Back to   
+  <a href="loginpage.html">Login</a></div>
+</body>
+</html>
